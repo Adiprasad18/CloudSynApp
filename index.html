@@ -3,32 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multi-Device Cloud Sync</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="app.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Multi-Device Sync App</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="%PUBLIC_URL%/styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Multi-Device Cloud Sync</h1>
-        
-        <button id="googleLogin">Login with Google</button>
+        <!-- Navigation Bar -->
+        <nav>
+            <div class="logo">SyncApp</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Devices</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
 
-        <div id="userSection" style="display: none;">
-            <h2>Welcome, <span id="userName"></span>!</h2>
-            <button id="logout">Logout</button>
+        <!-- Hero Section -->
+        <header>
+            <h1>Multi-Device Sync App</h1>
+            <p>Sync your contacts, calendar, and files seamlessly across devices.</p>
+            <button class="sync-button">Sync Now</button>
+        </header>
 
-            <h3>Sync Contacts</h3>
-            <input type="text" id="contactName" placeholder="Enter contact name">
-            <button id="saveContact">Save Contact</button>
+        <!-- Main Content -->
+        <main>
+            <section id="sync-status">
+                <h2>Sync Status</h2>
+                <p id="status-message">Checking device sync...</p>
+            </section>
 
-            <h3>Sync Calendar Event</h3>
-            <input type="text" id="eventName" placeholder="Enter event">
-            <input type="datetime-local" id="eventDate">
-            <button id="saveEvent">Save Event</button>
+            <section id="devices">
+                <h2>Connected Devices</h2>
+                <ul>
+                    <li>Device 1: Online</li>
+                    <li>Device 2: Offline</li>
+                    <li>Device 3: Syncing...</li>
+                </ul>
+            </section>
 
-            <h3>Synced Data</h3>
-            <ul id="dataList"></ul>
-        </div>
+            <div id="root">
+                <!-- React app will be injected here -->
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 Multi-Device Sync App. All rights reserved.</p>
+        </footer>
     </div>
+    
+
+    <!-- External JavaScript -->
+    <script src="%PUBLIC_URL%/script.js"></script>
 </body>
 </html>
